@@ -1,53 +1,55 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
+// Docusaurus configuration file
+// For more information, visit: https://docusaurus.io/docs/configuration
 
-import {themes as prismThemes} from 'prism-react-renderer';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Maar World',
-  tagline: 'Documentation',
+  tagline: 'Comprehensive Documentation',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://docs.maar.world/',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // Production URL of your site
+  url: 'https://docs.maar.world',
+  // Base URL pathname
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Maar World', // Usually your GitHub org/user name.
-  projectName: 'docs.maar.world', // Usually your repo name.
+  // If you're not using GitHub pages, you can remove these.
+  organizationName: 'maar34', // Your GitHub org/user name.
+  projectName: 'docs.maar.world', // Your repository name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  // Handle broken links and markdown links
+  onBrokenLinks: 'throw', // 'throw' for production builds
+  onBrokenMarkdownLinks: 'warn', // 'warn' allows the build to proceed
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // Internationalization configuration
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
 
+  // Presets for Docusaurus
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
         docs: {
+          // Path to your docs directory
+          path: 'docs',
+          // Path to your sidebar configuration
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/my-org/my-project/edit/main/docs/',
+          // Edit URL for the documentation pages
+          editUrl: 'https://github.com/maar34/docs.maar.world/edit/main/', // Update to your GitHub repo
+          routeBasePath: 'docs', // Base path for documentation
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/my-org/my-project/edit/main/blog/',
+          editUrl: 'https://github.com/maar34/docs.maar.world/edit/main/blog/', // Update to your GitHub repo
+          path: './blog',
+          routeBasePath: 'blog', // Base path for blog
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -56,32 +58,33 @@ const config = {
     ],
   ],
 
+  // Theme configuration
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Social card image for meta tags
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'docs.maar.world',
+        title: 'Maar World Docs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Maar World Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'userGuideSidebar', // Sidebar for User Guide
+            sidebarId: 'userGuideSidebar',
             position: 'left',
             label: 'User Guide',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'developersGuideSidebar', // Sidebar for Developers Guide
+            sidebarId: 'developersGuideSidebar',
             position: 'left',
             label: 'Developers Guide',
           },
-         // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/maar34',
+            href: 'https://github.com/maar34/docs.maar.world',
             label: 'GitHub',
             position: 'right',
           },
@@ -95,11 +98,11 @@ const config = {
             items: [
               {
                 label: 'User Guide',
-                to: '/user-guide/intro',
+                to: '/docs/user-guide', // Auto-generated sidebar link
               },
               {
                 label: 'Developers Guide',
-                to: '/developers-guide/intro',
+                to: '/docs/developers-guide', // Auto-generated sidebar link
               },
             ],
           },
@@ -119,10 +122,14 @@ const config = {
           {
             title: 'More',
             items: [
-//              { label: 'Blog', to: '/blog',}, 
+              // Uncomment the blog link if you have a blog
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/maar34',
+                href: 'https://github.com/maar34/docs.maar.world',
               },
             ],
           },
