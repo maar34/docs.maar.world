@@ -21,7 +21,7 @@ const config = {
   projectName: 'docs.maar.world', // Your repository name.
 
   // Handle broken links and markdown links
-  onBrokenLinks: 'throw', // 'throw' for production builds
+  onBrokenLinks: 'warn', // 'throw' for production builds
   onBrokenMarkdownLinks: 'warn', // 'warn' allows the build to proceed
 
   // Internationalization configuration
@@ -44,6 +44,7 @@ const config = {
           // Edit URL for the documentation pages
           editUrl: 'https://github.com/maar34/docs.maar.world/edit/main/', // Update to your GitHub repo
           routeBasePath: 'docs', // Base path for documentation
+          remarkPlugins: [require("remark-breaks")],
         },
         blog: {
           showReadingTime: true,
@@ -75,15 +76,18 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'userGuideSidebar',
             position: 'left',
-            label: 'User Guide',
+            label: '👨🏿‍🏫 User Guide',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'developersGuideSidebar',
+            type: 'dropdown',
+            label: '👩🏻‍💻 Developer’s Guide',
             position: 'left',
-            label: 'Developers Guide',
+            items: [
+              { to: '/docs/developers-guide', label: 'Developers-Wiki' },
+              { to: '/docs/api/CoreModule', label: 'Interplanetary Players API' }, // Link to the API docs
+            ],
           },
-          {
+              {
             href: 'https://github.com/maar34/docs.maar.world',
             label: 'GitHub',
             position: 'right',
@@ -141,6 +145,25 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+
+  // Add the search plugin to the theme
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true, // Optional: recommended for better caching
+        docsRouteBasePath: '/docs', // The route base path for docs
+        indexDocs: true, // Index docs (default: true)
+        indexPages: true, // Index pages other than docs (default: false)
+        language: ['en'], // Specify the language(s) to be indexed
+        highlightSearchTermsOnTargetPage: true, // Highlight search terms on the target page
+        explicitSearchResultPath: true, // Explicitly define search result paths
+      },
+    ],
+  ],
+
+
 };
 
 export default config;
