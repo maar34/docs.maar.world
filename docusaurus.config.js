@@ -23,7 +23,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Maar World', // Usually your GitHub org/user name.
-  projectName: 'Documentation for Maar World', // Usually your repo name.
+  projectName: 'docs.maar.world', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
