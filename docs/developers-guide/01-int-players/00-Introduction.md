@@ -12,11 +12,11 @@ At the moment, we are developing two versions of the Interplanetary Players: a w
 
 ---
 
-### Web Version: Built Using p5.js and RNBO
+### Web Version: Built Using three.js and RNBO
 
 The project is open-source and released under the GPL-3.0 license. It provides a powerful tool for those interested in experimenting with code, pushing the boundaries of music creation and listening.
 
-#### **RNBO**
+#### RNBO
 
 [RNBO](https://rnbo.cycling74.com) is a library and toolchain for building and exporting software that incorporates the sound of Max, a visual programming language for music and multimedia. RNBO enables users to create a wide range of music-related projects, including:
 
