@@ -1,0 +1,105 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Style the summary (question) */
+details > summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Style the answer */
+details > div {
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+
+/* Example: Style list items */
+ul {
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Example: Style the cover image */
+.docPage__header {
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* src/css/custom.css */
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.hero--center {
+  text-align: center;
+}
+
+.hero--dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Responsive Iframes */
+.responsive-iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
+
+/* Swiper Carousel Styles */
+.text-content {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.text-content h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.text-content p {
+  font-size: 1.2em;
+}
